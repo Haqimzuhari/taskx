@@ -15,7 +15,7 @@ export default function SignIn() {
                     <div className="space-y-4">
                         <div className="flex flex-col space-y-1">
                             <label htmlFor="email" className="text-sm font-semibold text-neutral-500">Email</label>
-                            <input id="email" type="email" placeholder="Your registered email address" className="appearance-none outline-none bg-neutral-700 px-4 py-2 rounded-md hover:bg-neutral-800 focus:bg-neutral-800 border border-transparent focus:border-yellow-600 hover:border-yellow-600 focus:ring-2 focus:ring-yellow-600 transition" autoFocus/>
+                            <input id="email" type="email" placeholder="Your registered email address" className="appearance-none outline-none bg-neutral-700 px-4 py-2 rounded-md hover:bg-neutral-800 focus:bg-neutral-800 border border-transparent focus:border-yellow-600 hover:border-yellow-600 focus:ring-2 focus:ring-yellow-600 transition"/>
                         </div>
                         <div className="flex flex-col space-y-1">
                             <label htmlFor="password" className="text-sm font-semibold text-neutral-500">Password</label>
