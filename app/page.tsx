@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase';
+import ScreenLoading from '@/components/screen/loading';
 
 type Task = {
     id: string;
@@ -38,9 +39,7 @@ export default function Home() {
     }
 
     if (loading) return (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-neutral-800/20 backdrop-blur-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-loader-pinwheel-icon lucide-loader-pinwheel animate-spin text-yellow-600"><path d="M22 12a1 1 0 0 1-10 0 1 1 0 0 0-10 0"/><path d="M7 20.7a1 1 0 1 1 5-8.7 1 1 0 1 0 5-8.6"/><path d="M7 3.3a1 1 0 1 1 5 8.6 1 1 0 1 0 5 8.6"/><circle cx="12" cy="12" r="10"/></svg>
-        </div>
+        <ScreenLoading/>
     );
 
     return (

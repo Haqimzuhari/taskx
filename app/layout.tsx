@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ScreenMaintenance from "@/components/screen/maintenance";
+import { MAINTENANCE_MODE } from "@/lib/constants";
 
 export const metadata: Metadata = {
     title: "Taskx",
@@ -8,8 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
-    const MAINTENANCE_MODE = process.env.MAINTENANCE_MODE
-    if (MAINTENANCE_MODE == "true") {
+    if (MAINTENANCE_MODE) {
         return (
             <ScreenMaintenance/>
         )
