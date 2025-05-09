@@ -14,7 +14,7 @@ export default function SignIn() {
 
     const [auth_data, set_auth_data] = useState({email: '', password: ''})
     const [error, set_error] = useState('')
-    const [auth_verify, set_auth_verify] = useState(true)
+    // const [auth_verify, set_auth_verify] = useState(true)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target
